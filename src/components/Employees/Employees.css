@@ -1,0 +1,26 @@
+.employees {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.employee {
+    background-color: aquamarine;
+    border: solid 0.2rem green;
+    border-radius: 0.5rem;
+    color: black;
+    padding: 0.5rem;
+    margin-top: 1rem;
+}
+
+.employee_footer {
+    margin: 1rem 0 0.25rem 0;
+    font-style: oblique;
+}
+
+.employee_header {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 3rem;
+}

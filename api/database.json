@@ -120,11 +120,11 @@
       "dateCompleted": "Fri Apr 29 2022 21:24:29 GMT-0500 (Central Daylight Time)"
     },
     {
+      "id": 6,
       "userId": 2,
       "description": "Hardrive died",
       "emergency": true,
-      "dateCompleted": "",
-      "id": 6
+      "dateCompleted": ""
     }
   ],
   "employeeTickets": [

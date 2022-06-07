@@ -45,7 +45,7 @@ export const TicketForm = () => {
         // TODO: Perform the fetch() to POST the object to the API
 
         /* POST request to JSON server, asking to save data, when you are done, then navigate user back to ticket list - route found in applicationViews.js*/
-        
+
         return fetch('http://localhost:8088/serviceTickets', {
             method: "POST",
             headers: {

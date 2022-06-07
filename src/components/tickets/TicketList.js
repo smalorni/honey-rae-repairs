@@ -2,9 +2,9 @@ import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import "./tickets.css" //import css file
 
-export const TicketList = () => {
+export const TicketList = ({searchTermState}) => {
     /* Tickets has a value of empty array, setTickets has a value of a function - initial change of state. The purpose of function (setTickets) is to change the state to the entire array of service tickets from API */
-    const [tickets, setTickets] = useState([]) //initial value is empty array
+    const [tickets, setTickets] = useState([]) //Original from API - initial value is empty array
 
     /* Don't want to modify array of tickets from API so created another set of variable names, depends if customer or employee */
     const [filteredTickets, setFiltered] = useState([])
@@ -13,6 +13,14 @@ export const TicketList = () => {
     const [openOnly, updateOpenOnly] = useState(false)//Open ticket function
     const navigate = useNavigate() //navigation hook 
     
+    /* We are displaying filteredTickets so that is the state we are using to search */
+    useEffect(
+        () => {
+            const searchedTickets = tickets.filter(ticket => ticket.description.toLowerCase().startsWith(searchTermState.toLowerCase))
+            setFiltered(searchedTickets)
+        },
+        [ searchTermState ]
+    )
 
     /* Steps:
     1. To get user honey obj of local storage */

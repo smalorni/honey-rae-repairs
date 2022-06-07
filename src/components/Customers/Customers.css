@@ -1,0 +1,21 @@
+.customers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.customer {
+    background-color: aquamarine;
+    border: solid 0.2rem green;
+    border-radius: 0.5rem;
+    color: black;
+    padding: 0.5rem;
+    margin-top: 1rem;
+}
+
+.customer_header {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 3rem;
+}
